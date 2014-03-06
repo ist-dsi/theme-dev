@@ -1,1 +1,206 @@
-@brand-success: black;
+
+@font-face {
+    font-family: 'Klavika';
+    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot');
+    src: url('../fonts/klavika/klavikamedium-plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klavika/klavikamedium-plain-webfont.woff') format('woff'),
+         url('../fonts/klavika/klavikamedium-plain-webfont.ttf') format('truetype'),
+         url('../fonts/klavika/klavikamedium-plain-webfont.svg#klavika') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika';
+    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot');
+    src: url('../fonts/klavika/klavikaregular-plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klavika/klavikaregular-plain-webfont.woff') format('woff'),
+         url('../fonts/klavika/klavikaregular-plain-webfont.ttf') format('truetype'),
+         url('../fonts/klavika/klavikaregular-plain-webfont.svg#klavika') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika';
+    src: url('../fonts/klavika/klavikalight-plain-webfont.eot');
+    src: url('../fonts/klavika/klavikalight-plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klavika/klavikalight-plain-webfont.woff') format('woff'),
+         url('../fonts/klavika/klavikalight-plain-webfont.ttf') format('truetype'),
+         url('../fonts/klavika/klavikalight-plain-webfont.svg#klavika') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Klavika';
+    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot');
+    src: url('../fonts/klavika/klavikaregular-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/klavika/klavikaregular-italic-webfont.woff') format('woff'),
+         url('../fonts/klavika/klavikaregular-italic-webfont.ttf') format('truetype'),
+         url('../fonts/klavika/klavikaregular-italic-webfont.svg#klavika') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@btn-default-color:#5F5F5F;
+
+@link-color: #4f8ef7;
+@link-hover-color: #0b60ef;
+
+@brand-primary: #4a87ee;
+@btn-primary-border: #145dd7;
+
+@brand-success: #66cc33;
+@btn-success-border: #478f24;
+
+@brand-info: #43CEEC;
+@btn-info-border: #1aaac3;
+
+@brand-warning: #f0b840;
+@btn-warning-border: #d39511;
+
+@brand-danger: #ef4e3a;
+@btn-danger-border: #cc2511;
+
+@brand-royal: #8a6de9;
+@btn-royal-border: #552bdf;
+
+@brand-dark: #444444;
+@btn-dark-border: #111111;
+
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@headings-font-family: "Klavika";
+
+@code-color:#4d8cf4;
+@code-bg:whitesmoke;
+
+@pre-color:#333333;
+@pre-bg:transparent;
+@pre-border-color: #eeeeee;
+
+@border-radius-base:        2px;
+@border-radius-large:       3px;
+@border-radius-small:       2px;
+
+h5,h6{
+  font-weight: bold;
+}
+
+body{
+  font-weight: 200;
+}
+
+a{
+  opacity: 0.8;
+  transition: .1s ease-in-out;
+}
+
+a:hover{
+  opacity: 1;
+}
+
+a.btn{
+  opacity: 1;
+}
+
+.btn-royal {
+  .button-variant(@btn-success-color; @brand-royal; @btn-royal-border);
+}
+
+.btn-dark {
+  .button-variant(@btn-success-color; @brand-dark; @btn-dark-border);
+}
+
+.button-shell(@color,@hover){
+  color:@color;
+  &:hover{
+    color:@hover;
+    background-color: white;
+    border:1px solid @hover;
+  }
+}
+
+.btn-shell {
+  background-color:white;
+  &.btn-primary {
+    .button-shell(@btn-primary-border,@brand-primary);
+  }
+  &.btn-success {
+    .button-shell(@btn-success-border,@brand-success);
+  }
+  &.btn-info {
+    .button-shell(@btn-info-border,@brand-info);
+  }
+  &.btn-warning {
+    .button-shell(@btn-warning-border,@brand-warning);
+  }
+  &.btn-danger {
+    .button-shell(@btn-danger-border,@brand-danger);
+  }
+  &.btn-royal {
+    .button-shell(@btn-royal-border,@brand-royal);
+  }
+  &.btn-dark {
+    .button-shell(@btn-dark-border,@brand-dark);
+  }
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(1,0.5), opacity(0);
+  }
+  70% {
+    -webkit-transform: scale(1.2,1.2);
+  }
+  100% {
+    -webkit-transform: scale(1,1),opacity(1);
+  }
+}
+.modal-content{
+  border:none;
+}
+
+.modal-backdrop{
+    -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.dropdown-menu{
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.175);
+  margin: -1px 0 0;
+}
+
+.modal.in .modal-dialog{
+  -webkit-animation: bounceIn 0.3s ease-out;
+}
+
+.btn{
+  font-family:Klavika;
+}
+
+> li > a:focus {
+  background-color: #E0E7EC;
+  transition:none;
+}
+
+.dropdown-menu a{
+  transition:none;
+}
+
+.dropdown-header{
+  font-family: Klavika;
+}
+
+.nav{
+  font-size: 15px;
+  &.nav-tabs{
+    padding-left: 15px;
+  }
+  li a{
+    font-family: Klavika;
+    opacity:1;
+  }
+}
